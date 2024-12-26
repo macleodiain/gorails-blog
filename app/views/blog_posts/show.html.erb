@@ -1,0 +1,6 @@
+<div><%= @blog_post.title %></div>
+<div><%= @blog_post.body %></div>
+<br>
+<%= link_to "Home", blog_posts_path %>
+<%= link_to "Edit", edit_blog_post_path %>
+<%= link_to "Delete", blog_post_path, data:{turbo_method: :delete}%>

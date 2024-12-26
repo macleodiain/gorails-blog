@@ -1,0 +1,11 @@
+<% @blog_posts.each do |post|%>
+<div>
+    <%= link_to post.title, blog_post_path(post) %>
+</div>
+
+ <div>
+    <%= post.body %>
+</div>
+
+<hr>
+<%end%>
