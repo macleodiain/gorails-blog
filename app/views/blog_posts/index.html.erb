@@ -1,11 +1,21 @@
-<% @blog_posts.each do |post|%>
-<div>
-    <%= link_to post.title, blog_post_path(post) %>
-</div>
 
- <div>
-    <%= post.body %>
-</div>
 
-<hr>
-<%end%>
+<div class="w-full h-full flex justify-center">
+    
+        <div class="flex-col flex w-4/6 bg-gray-100 mx-20 mt-28 px-5  ">
+            <% @blog_posts.each do |post|%>
+            <div class = "flex-col p-5 mb-0 ">
+    
+                    <div class="mb-3">
+                        <%= link_to post.title, blog_post_path(post) %>
+                    </div>
+    
+                     <div>
+                        <%= post.body%>
+                    </div>
+    
+            </div>
+            <hr class="m-2 h-px bg-gray-400 border-0 dark:bg-gray-700">
+            <%end%>
+        </div>
+</div>

@@ -1,22 +1,29 @@
+
+<div class="flex flex-col h-full items-center">
+    <p class="mb-10">Add a new post:</p>
 <%= form_with model: @blog_post do |form|%>
-<div>
-    <%= form.label :title%>
-    <%= form.text_field :title%>
-    <% @blog_post.errors.full_messages_for(:title).each do |message|%>     
-        <%= message %>
-    <%end%>
-</div>
 
-<div>
-    <%= form.label :body%>
-    <%= form.text_area :body%>
-    <% @blog_post.errors.full_messages_for(:body).each do |message|%>     
-        <%= message %>
-    <%end%>
-</div>
-
-<div>
-    <%= form.submit %>
+    <div class="flex-col justify-center items-center space-y-5 ">
+        <div class = "">
+            <%= form.label :title%>
+            <%= form.text_field :title%>
+            <% @blog_post.errors.full_messages_for(:title).each do |message|%>
+                <%= message %>
+            <%end%>
+        </div>
+        
+        <div>
+            <%= form.label :body%>
+            <%= form.text_area :body%>
+            <% @blog_post.errors.full_messages_for(:body).each do |message|%>
+                <%= message %>
+            <%end%>
+        </div>
+        
+        <div>
+            <%= form.submit %>
+        </div>
+    </div>
 </div>
 
 <%end%>
