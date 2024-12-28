@@ -1,3 +1,5 @@
+
+<div><%= image_tag @blog_post.cover_image if @blog_post.cover_image.attached? %></div>
 <div><%= @blog_post.title %></div>
 <div><%= @blog_post.content %></div>
 <br>
